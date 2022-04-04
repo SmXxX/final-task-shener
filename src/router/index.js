@@ -1,25 +1,50 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import Home from '../views/Home.vue'
+import { createRouter, createWebHistory } from "vue-router";
+
+import Home from "../views/Home.vue";
+import PageBlog from "../views/PageBlog.vue";
+import PageContact from "../views/PageContact.vue";
+import PageLogin from "../views/PageLogin.vue";
+import PageRegister from "../views/PageRegister.vue";
+import PageSingle from "../views/PageSingle.vue";
 
 const routes = [
   {
-    path: '/',
-    name: 'Home',
-    component: Home
+    path: "/",
+    name: "Home",
+    component: Home,
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
-]
+    path: "/page-blog",
+    name: "PageBlog",
+    component: PageBlog,
+  },
+  {
+    path: "/page-single/:id",
+    name: "PageSingle",
+    component: PageSingle,
+    props: true,
+  },
+  {
+    path: "/page-contact",
+    name: "PageContact",
+    component: PageContact,
+  },
+
+  {
+    path: "/page-login",
+    name: "PageLogin",
+    component: PageLogin,
+  },
+  {
+    path: "/page-register",
+    name: "PageRegister",
+    component: PageRegister,
+  },
+];
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  routes
-})
+  routes,
+});
 
-export default router
+export default router;

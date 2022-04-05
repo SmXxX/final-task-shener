@@ -11,8 +11,8 @@
     color: #1f1f39;
     font-weight: 900;
     text-align: center;
-    line-height: 110px;
-    font-size: 100px;
+    line-height: 70px;
+    font-size: 70px;
   }
   .small-heading-home {
     font-family: Roboto, "sans-serif";
@@ -99,6 +99,10 @@
 
   color: rgba(31, 31, 57, 0.5);
 }
+.slide-images {
+  width: 232px;
+  height: 464px;
+}
 .ul-awesome {
   list-style-type: none;
   margin-left: 0;
@@ -148,12 +152,20 @@
   .ellipse2 {
     display: none;
   }
+  .main-phone {
+    margin-top: -50px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .main-phone {
-    margin-top: -170px;
+    margin-top: -50px;
   }
   .choose-img {
     margin-bottom: -45px;
+  }
+}
+@media screen and (min-width: 750px) {
+  .main-phone {
+    margin-top: -50px;
   }
 }

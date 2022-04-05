@@ -4,7 +4,7 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-12 heading-home">
-            <div>Jump Start Your</div>
+            Jump Start Your <br />
             Business to Next Level.
           </div>
           <div class="col-12">
@@ -60,28 +60,37 @@
       </div>
     </section>
     <section class="phones">
-      <div class="container-fluid phone-slider" style="position: relative">
-        <div class="row">
-          <div class="col-12">
-            <img
-              src="../assets/HomeImages/main-phone.png"
-              alt=""
-              class="main-phone"
-            />
+      <Carousel class="carousel" v-slot="{ currentSlide }">
+        <img
+          src="../assets/HomeImages/main-phone.png"
+          class="main-phone"
+          alt=""
+        />
+        <CarouselSlide v-for="(slide, index) in carouselSlides" :key="index">
+          <div class="container">
+            <div class="row">
+              <div v-show="currentSlide === index + 1" class="slide-info">
+                <img
+                  class="slide-images"
+                  :src="require(`../assets/HomeImages/${slide}.jpg`)"
+                  alt=""
+                />
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
+        </CarouselSlide>
+      </Carousel>
     </section>
-    <section class="trusted">
+    <section class="trusted mt-5">
       <div class="container">
-        <div class="trusted-heading">Trusted By</div>
+        <div class="trusted-heading mb-5">Trusted By</div>
         <span class="trusted-sec-heading"
           >Onir has been featured on World most famous brands in Top 20 list.
           People are love our
           <div>services most and get benefits from it.</div>
         </span>
         <div class="row">
-          <div class="col-12" style="margin-top: 20px">
+          <div class="col-12 mt-5">
             <svg
               id="logo-9"
               width="152"
@@ -614,8 +623,50 @@
 <script>
 // @ is an alias to /src
 import "../components/app.scss";
+import Carousel from "../components/Carousel.vue";
+import CarouselSlide from "../components/CarouselSlide.vue";
 
 export default {
   name: "Home",
+  components: {
+    Carousel,
+    CarouselSlide,
+  },
+  setup() {
+    const carouselSlides = [
+      "slide",
+      "slide2",
+      "slide3",
+      "slide4",
+      "slide5",
+      "slide6",
+      "slide7",
+    ];
+    return {
+      carouselSlides,
+    };
+  },
 };
 </script>
+
+<style lang="scss">
+.carousel {
+  position: relative;
+  max-height: 50vh;
+  height: 100vh;
+  margin-top: -40px;
+  .slide-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .main-phone {
+    position: absolute;
+    z-index: 1;
+    transform: translateX(-50%);
+    left: 50%;
+    width: 571px;
+    height: 565px;
+  }
+}
+</style>

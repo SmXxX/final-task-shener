@@ -1,13 +1,13 @@
 <template>
-  <div v-show="visibleSlide === index" class="carousel-slide">
-    <slot></slot>
+  <div class="slide">
+    <transition name="slide">
+      <slot />
+    </transition>
   </div>
 </template>
+
 <script>
-export default {
-  props: ["visibleSlide", "index"],
-  data() {
-    return {};
-  },
-};
+export default {};
 </script>
+
+<style></style>

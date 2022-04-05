@@ -28,7 +28,7 @@ export default {
     const currentSlide = ref(1);
     const getSlideCount = ref(null);
     const autoPlayEnabled = ref(true);
-    const timeoutDuration = ref(3000);
+    const timeoutDuration = ref(2000);
 
     const nextSlide = () => {
       if (currentSlide.value === getSlideCount.value) {

@@ -64,6 +64,7 @@
         <img
           src="../assets/HomeImages/main-phone.png"
           class="main-phone"
+          style="max-width: 100%"
           alt=""
         />
         <CarouselSlide v-for="(slide, index) in carouselSlides" :key="index">

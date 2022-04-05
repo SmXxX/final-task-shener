@@ -1,5 +1,7 @@
 <template>
-  <div class="slide-phone">In slide with href {{ slide.src }}</div>
+  <div class="slide-phone">
+    <img :src="slide.src" alt="" />
+  </div>
 </template>
 
 <script>
@@ -7,10 +9,8 @@ export default {
   data() {
     return {};
   },
-  props: {
-    slide: ["slide"],
-  },
+  props: ["slide"],
 };
 </script>
 
-<style></style>
+<style lang="scss" scoped></style>

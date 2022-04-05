@@ -3,13 +3,13 @@
     <slot :currentSlide="currentSlide" />
     <div class="navigate">
       <div class="toggle-page left">
-        <i @click="prevSlide()" class="fas fa-chevron-left"></i>
+        <!-- <i @click="prevSlide()" class="fas fa-chevron-left"></i> -->
       </div>
       <div class="toggle-page right">
-        <i @click="nextSlide()" class="fas fa-chevron-right"></i>
+        <!-- <i @click="nextSlide()" class="fas fa-chevron-right"></i> -->
       </div>
     </div>
-    <div class="pagination">
+    <!-- <div class="pagination">
       <span
         @click="goToSlide(index)"
         v-for="(slide, index) in getSlideCount"
@@ -17,7 +17,7 @@
         :class="{ active: index + 1 === currentSlide }"
       >
       </span>
-    </div>
+    </div> -->
   </div>
 </template>
 

@@ -3,13 +3,12 @@
     <div class="container">
       <div class="row">
         <!-- <form @submit.prevent="handleSubmit()"> -->
-        <h3>Login</h3>
+        <h1 class="my-5">Login</h1>
         <div class="form-group">
-          <label for="username">Username: </label>
-
           <input
             v-model="username"
             type="text"
+            class="inputs"
             placeholder="Username"
             id="username"
             name="username"
@@ -17,10 +16,9 @@
         </div>
 
         <div class="form-group my-3">
-          <label for="password">Password: </label>
-
           <input
             v-model="password"
+            class="inputs"
             type="password"
             placeholder="Password"
             id="password"
@@ -99,3 +97,26 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+.inputs {
+  width: 516px;
+  height: 89px;
+  background: #ffffff;
+  border: 1px solid #fff0e9;
+  box-sizing: border-box;
+  background: rgba(255, 240, 233, 0.7);
+  border-radius: 25px;
+  max-width: 100%;
+  max-height: 100%;
+}
+::placeholder {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  padding: 20px 0 15px 20px;
+  line-height: 40px;
+  color: rgba(31, 31, 57, 0.5);
+}
+</style>

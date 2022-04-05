@@ -509,7 +509,7 @@
           <div class="mt-3">
             <img src="../assets/HomeImages/duration.png" alt="" />
           </div>
-          <div class="col col-lg-4 col-sm-12 my-4">
+          <!-- <div class="col col-lg-4 col-sm-12 my-4">
             <img src="../assets/HomeImages/Plan1.png" alt="" />
           </div>
           <div class="col col-lg-4 col-sm-12 my-4">
@@ -517,7 +517,8 @@
           </div>
           <div class="col col-lg-4 col-sm-12 my-4">
             <img src="../assets/HomeImages/Plan3.png" alt="" />
-          </div>
+          </div> -->
+          <Slides></Slides>
         </div>
       </div>
       <div class="container">
@@ -625,12 +626,14 @@
 import "../components/app.scss";
 import Carousel from "../components/Carousel.vue";
 import CarouselSlide from "../components/CarouselSlide.vue";
+import Slides from "../components/Slides.vue";
 
 export default {
   name: "Home",
   components: {
     Carousel,
     CarouselSlide,
+    Slides,
   },
   setup() {
     const carouselSlides = [

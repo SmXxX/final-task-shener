@@ -1,14 +1,14 @@
 <template>
   <div class="carousel">
     <slot :currentSlide="currentSlide" />
-    <div class="navigate">
+    <!-- <div class="navigate">
       <div class="toggle-page left">
-        <!-- <i @click="prevSlide()" class="fas fa-chevron-left"></i> -->
+        <i @click="prevSlide()" class="fas fa-chevron-left"></i>
       </div>
       <div class="toggle-page right">
-        <!-- <i @click="nextSlide()" class="fas fa-chevron-right"></i> -->
+        <i @click="nextSlide()" class="fas fa-chevron-right"></i>
       </div>
-    </div>
+    </div> -->
     <!-- <div class="pagination">
       <span
         @click="goToSlide(index)"
@@ -25,7 +25,7 @@
 import { ref, onMounted } from "vue";
 export default {
   setup() {
-    const currentSlide = ref(1);
+    const currentSlide = ref(4);
     const getSlideCount = ref(null);
     const autoPlayEnabled = ref(true);
     const timeoutDuration = ref(2000);
@@ -80,17 +80,17 @@ export default {
   .right {
     justify-content: flex-end;
   }
-  // i {
-  //   cursor: pointer;
-  //   display: flex;
-  //   align-items: center;
-  //   justify-content: center;
-  //   border-radius: 50%;
-  //   width: 40px;
-  //   height: 40px;
-  //   background-color: #6347c7;
-  //   color: #fff;
-  // }
+  i {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: #6347c7;
+    color: #fff;
+  }
 }
 // .pagination {
 //   position: absolute;

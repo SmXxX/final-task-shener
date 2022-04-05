@@ -61,16 +61,16 @@
     </section>
     <section class="phones">
       <Carousel class="carousel" v-slot="{ currentSlide }">
-        <img
-          src="../assets/HomeImages/main-phone.png"
-          class="main-phone"
-          style="max-width: 100%"
-          alt=""
-        />
         <CarouselSlide v-for="(slide, index) in carouselSlides" :key="index">
           <div class="container">
             <div class="row">
               <div v-show="currentSlide === index + 1" class="slide-info">
+                <img
+                  src="../assets/HomeImages/main-phone.png"
+                  class="main-phone"
+                  style="max-width: 100%"
+                  alt=""
+                />
                 <img
                   class="slide-images"
                   :src="require(`../assets/HomeImages/${slide}.jpg`)"
@@ -653,7 +653,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .carousel {
   position: relative;
   max-height: 50vh;

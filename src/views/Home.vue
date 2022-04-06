@@ -7,7 +7,7 @@
             Jump Start Your <br />
             Business to Next Level.
           </div>
-          <div class="col-12">
+          <div class="col-12 mt-5">
             <span class="small-heading-home"
               ><div>
                 Improving your small business's growth through Onir app. It also
@@ -671,13 +671,13 @@ export default {
     ];
 
     // const peopleSlides = [
-    // "person1",
-    // "person2",
-    // "person3",
-    // "person4",
-    // "person5",
-    // "person6",
-    // "person7",
+    //   "person1",
+    //   "person2",
+    //   "person3",
+    //   "person4",
+    //   "person5",
+    //   "person6",
+    //   "person7",
     // ];
     return {
       carouselSlides,

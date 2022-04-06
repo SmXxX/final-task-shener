@@ -65,33 +65,33 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.navigate {
-  padding: 0 16px;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  .toggle-page {
-    display: flex;
-    flex: 1;
-  }
-  .right {
-    justify-content: flex-end;
-  }
-  i {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    background-color: #6347c7;
-    color: #fff;
-  }
-}
+// .navigate {
+//   padding: 0 16px;
+//   height: 100%;
+//   width: 100%;
+//   position: absolute;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   .toggle-page {
+//     display: flex;
+//     flex: 1;
+//   }
+//   .right {
+//     justify-content: flex-end;
+//   }
+//   i {
+//     cursor: pointer;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     border-radius: 50%;
+//     width: 40px;
+//     height: 40px;
+//     background-color: #6347c7;
+//     color: #fff;
+//   }
+// }
 // .pagination {
 //   position: absolute;
 //   z-index: 1;

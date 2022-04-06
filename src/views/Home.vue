@@ -493,7 +493,7 @@
           about our great results, <br />
           personable services and knowledge.</span
         >
-        <ReviewCarousel class="carousel mt-5" v-slot="{ currentSlide }">
+        <!-- <ReviewCarousel class="carousel mt-5" v-slot="{ currentSlide }">
           <ReviewCarouselSlide
             v-for="(slide, index) in peopleSlides"
             :key="index"
@@ -510,7 +510,7 @@
               </div>
             </div>
           </ReviewCarouselSlide>
-        </ReviewCarousel>
+        </ReviewCarousel> -->
       </div>
     </section>
     <section
@@ -689,15 +689,15 @@ export default {
 
 <style lang="scss" scoped>
 .carousel {
-  position: relative;
+  // position: relative;
   max-height: 50vh;
   height: 100vh;
   margin-top: -40px;
-  .slide-info {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
+  // .slide-info {
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  // }
   .main-phone {
     position: absolute;
     z-index: 1;

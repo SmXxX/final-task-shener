@@ -486,13 +486,32 @@
       </div>
     </section>
     <section class="peopleLoves">
-      <div class="trusted-heading">People Loves Onir</div>
-      <span class="trusted-sec-heading"
-        >We love our clients. Here are just a few of the amazing testimonials
-        about our great results, <br />
-        personable services and knowledge.</span
-      >
-      <div style="font-size: 70px">CAROUSEL HERE!</div>
+      <div class="container">
+        <div class="trusted-heading mb-5">People Loves Onir</div>
+        <span class="trusted-sec-heading"
+          >We love our clients. Here are just a few of the amazing testimonials
+          about our great results, <br />
+          personable services and knowledge.</span
+        >
+        <ReviewCarousel class="carousel mt-5" v-slot="{ currentSlide }">
+          <ReviewCarouselSlide
+            v-for="(slide, index) in peopleSlides"
+            :key="index"
+          >
+            <div class="container">
+              <div class="row">
+                <div v-show="currentSlide === index + 1" class="slide-info">
+                  <img
+                    class="people-images"
+                    :src="require(`../assets/HomeImages/${slide}.png`)"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </ReviewCarouselSlide>
+        </ReviewCarousel>
+      </div>
     </section>
     <section
       class="simplePlans mt-5"
@@ -628,6 +647,8 @@ import "../components/app.scss";
 import Carousel from "../components/Carousel.vue";
 import CarouselSlide from "../components/CarouselSlide.vue";
 import Slides from "../components/Slides.vue";
+import ReviewCarousel from "../components/ReviewCarousel.vue";
+import ReviewCarouselSlide from "../components/ReviewCarouselSlide.vue";
 
 export default {
   name: "Home",
@@ -635,6 +656,8 @@ export default {
     Carousel,
     CarouselSlide,
     Slides,
+    ReviewCarousel,
+    ReviewCarouselSlide,
   },
   setup() {
     const carouselSlides = [
@@ -646,8 +669,19 @@ export default {
       "slide6",
       "slide7",
     ];
+
+    // const peopleSlides = [
+    // "person1",
+    // "person2",
+    // "person3",
+    // "person4",
+    // "person5",
+    // "person6",
+    // "person7",
+    // ];
     return {
       carouselSlides,
+      // peopleSlides,
     };
   },
 };
@@ -673,4 +707,12 @@ export default {
     height: 565px;
   }
 }
+.peopleLoves {
+  .people-images {
+    border-radius: 50%;
+  }
+}
+// @media screen and (max-width: 600px) {
+
+// }
 </style>

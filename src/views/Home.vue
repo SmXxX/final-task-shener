@@ -493,6 +493,7 @@
           about our great results, <br />
           personable services and knowledge.</span
         >
+
         <!-- <ReviewCarousel class="carousel mt-5" v-slot="{ currentSlide }">
           <ReviewCarouselSlide
             v-for="(slide, index) in peopleSlides"
@@ -503,7 +504,7 @@
                 <div v-show="currentSlide === index + 1" class="slide-info">
                   <img
                     class="people-images"
-                    :src="require(`../assets/HomeImages/${slide}.png`)"
+                    :src="require(`../assets/HomeImages/${slide}.jpg`)"
                     alt=""
                   />
                 </div>

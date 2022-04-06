@@ -69,80 +69,92 @@
 
           <ul class="list-unstyled mb-0">
             <li>
-              <h5 class="text-light">hello@onirapp.com</h5>
+              <a href="mailto:" class="link">hello@onirapp.com</a>
             </li>
             <li>
-              <h5 class="text-light">+1-800-123 4567</h5>
+              <a href="tel" class="link">+1-800-123 4567</a>
             </li>
           </ul>
         </div>
 
         <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-light mb-2">Company</h5>
+          <a class="link text-light" href="http://localhost:8080/#features"
+            >Company</a
+          >
 
           <ul class="list-unstyled">
             <li>
-              <h5 class="text-light">About</h5>
+              <a class="link" href="/">About</a>
             </li>
             <li>
-              <h5 class="text-light">Services</h5>
+              <a class="link" href="/">Services</a>
             </li>
             <li>
-              <h5 class="text-light">Careers</h5>
+              <a class="link" href="/">Careers</a>
             </li>
             <li>
-              <h5 class="text-light">Blog</h5>
+              <a class="link" href="/page-blog">Blog</a>
             </li>
             <li>
-              <h5 class="text-light">Pricing</h5>
+              <a class="link" href="http://localhost:8080/#prices">Pricing</a>
             </li>
           </ul>
         </div>
 
         <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-light">Contact</h5>
+          <a class="link text-light" href="/page-contact">Contact</a>
 
           <ul class="list-unstyled mb-0">
             <li>
-              <h5 class="text-light">Help</h5>
+              <a class="link" href="http://localhost:8080/#prices">Help</a>
             </li>
             <li>
-              <h5 class="text-light">FAQs</h5>
+              <a class="link" href="http://localhost:8080/#faqs">FAQs</a>
             </li>
             <li>
-              <h5 class="text-light">Press</h5>
+              <a class="link" href="/">Press</a>
             </li>
             <li>
-              <h5 class="text-light">Terms and Conditions</h5>
+              <a class="link" href="http://localhost:8080/#prices">Pricing</a>
             </li>
             <li>
-              <h5 class="text-light">Partners</h5>
+              <a class="link" href="http://localhost:8080/#trusted">Partners</a>
             </li>
           </ul>
         </div>
 
         <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
           <div>
-            <img
-              src="../assets/FooterImages/Facebook.png"
-              alt=""
-              style="margin-right: 15px"
-            />
-            <img
-              src="../assets/FooterImages/Twitter.png"
-              alt=""
-              style="margin-right: 15px"
-            />
-            <img src="../assets/FooterImages/Instagram.png" alt="" />
+            <a href="http://facebook.com" target=":blank">
+              <img
+                src="../assets/FooterImages/Facebook.png"
+                alt=""
+                style="margin-right: 15px"
+              />
+            </a>
+            <a href="http://twitter.com" target=":blank">
+              <img
+                src="../assets/FooterImages/Twitter.png"
+                alt=""
+                style="margin-right: 15px"
+              />
+            </a>
+            <a href="http://instagram.com" target=":blank">
+              <img src="../assets/FooterImages/Instagram.png" alt="" />
+            </a>
           </div>
 
-          <div class="my-3" style="color: white">Let's try out</div>
+          <div class="try my-3" style="color: white">Let's try out</div>
 
           <div class="my-3">
-            <img src="../assets/FooterImages/BtnAppStore.png" alt="" />
+            <a href="http://apple.com" target=":blank">
+              <img src="../assets/FooterImages/BtnAppStore.png" alt="" />
+            </a>
           </div>
           <div>
-            <img src="../assets/FooterImages/BtnPlayStore.png" alt="" />
+            <a href="http://play.google.com" target=":blank">
+              <img src="../assets/FooterImages/BtnPlayStore.png" alt="" />
+            </a>
           </div>
         </div>
       </div>
@@ -181,5 +193,24 @@
   box-sizing: border-box;
   background-color: transparent;
   border-radius: 20px;
+}
+.link {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 44px;
+  text-decoration: none;
+  text-align: right;
+  color: rgba(255, 255, 255, 0.5);
+}
+.try {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+
+  color: #ffffff;
 }
 </style>

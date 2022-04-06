@@ -3,11 +3,15 @@
   padding: 0;
   box-sizing: border-box;
 }
+body,
+html {
+  scroll-behavior: smooth;
+}
 .hero {
   background-color: #fff0e9;
   height: 800px;
   .heading-home {
-    font-family: Roboto, "sans-serif";
+    font-family: "Roboto", "sans-serif";
     color: #1f1f39;
     font-weight: 900;
     text-align: center;
@@ -15,7 +19,7 @@
     font-size: 70px;
   }
   .small-heading-home {
-    font-family: Roboto, "sans-serif";
+    font-family: "Roboto", "sans-serif";
     color: rgba(31, 31, 57, 0.5);
     font-weight: 400;
     text-align: center;
@@ -46,7 +50,7 @@
   }
 }
 .trusted-heading {
-  font-family: Robota, "sans-serif";
+  font-family: "Roboto", "sans-serif";
   font-style: normal;
   font-weight: 700;
   font-size: 50px;
@@ -54,7 +58,7 @@
   padding-top: 70px;
 }
 .trusted-sec-heading {
-  font-family: "Roboto";
+  font-family: " Roboto ", "sans-serif";
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -62,21 +66,24 @@
   text-align: center;
 }
 .get-in-touch {
-  font-family: "Roboto";
+  font-family: " Roboto ", "sans-serif";
+
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
   line-height: 28px;
 }
 .get-in-touch-sec {
-  font-family: "Roboto";
+  font-family: " Roboto ", "sans-serif";
+
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
 }
 .reviewandconfirm {
-  font-family: "Roboto";
+  font-family: " Roboto ", "sans-serif";
+
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
@@ -89,7 +96,8 @@
   width: 164px;
   height: 28px;
 
-  font-family: "Roboto";
+  font-family: " Roboto ", "sans-serif";
+
   font-style: normal;
   font-weight: 700;
   font-size: 15px;
@@ -100,8 +108,12 @@
   color: rgba(31, 31, 57, 0.5);
 }
 .slide-images {
+  margin-top: -12px;
   width: 232px;
-  height: 464px;
+  height: 480px;
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
 }
 .ul-awesome {
   list-style-type: none;

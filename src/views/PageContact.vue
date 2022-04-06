@@ -134,7 +134,10 @@
                   ></textarea>
                 </div>
               </div>
-              <div class="trusted-sec-heading my-4" style="text-align: left">
+              <div
+                class="trusted-sec-heading my-4"
+                style="text-align: left; color: rgba(31, 31, 57, 0.5)"
+              >
                 By submitting this form you agree to our terms and conditions
                 and our Privacy policy. Orci varius natoque penatibus et magnis
                 dis paridiculus mus. Duis nisl ante, condimentum a faucibus
@@ -153,6 +156,11 @@
             </div>
           </form>
         </div>
+      </div>
+    </section>
+    <section class="ourOffice my-5 py-5">
+      <div class="container">
+        <img src="../assets/contact.png" alt="" style="max-weight: 100%" />
       </div>
     </section>
   </div>

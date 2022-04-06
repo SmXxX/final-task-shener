@@ -37,8 +37,10 @@
           <router-link class="link" to="/page-blog">Blog</router-link>
           <router-link class="link" to="/page-contact">Contact</router-link>
           <router-link class="link" to="/page-login">Login</router-link>
-          <router-link class="link" to="/page-register">Sign Up</router-link>
         </div>
+        <router-link class="link register" to="/page-register"
+          ><button class="button">Sign Up</button>
+        </router-link>
       </div>
     </nav>
   </div>
@@ -70,6 +72,30 @@ export default {
     padding: 20px;
   }
 }
+.link {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  text-decoration: none;
+  text-align: right;
+  color: #1f1f39;
+}
+.button {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: #ffffff;
+  width: 130px;
+  height: 45px;
+  background: #0e7dff;
+  border-radius: 500px;
+}
+
 @media screen and (max-width: 768px) {
 }
 </style>

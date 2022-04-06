@@ -91,7 +91,7 @@ export default {
               alert(data);
               return;
             }
-            this.$router.push("/PageLogin");
+            this.$router.push("/page-login");
           });
       } catch (err) {
         console.log(err);

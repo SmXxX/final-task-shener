@@ -23,15 +23,25 @@
       <div v-if="onePost" class="container-fluid m-0 px-0 px-md-4">
         <div class="row mx-0 px-3 mx-md-5 mb-5" style="margin-top: -60px">
           <div class="col col-lg-6 col-sm-12">
-            <img :src="onePost.post_image" />
+            <router-link
+              style="padding-left: 0"
+              :to="{ name: 'PageSingle', params: { id: onePost.post_id } }"
+            >
+              <img :src="onePost.post_image" />
+            </router-link>
           </div>
           <div class="col col-lg-6 col-sm-12">
-            <div
-              class="trusted-heading"
-              style="padding-top: 0; text-align: left"
+            <router-link
+              style="text-decoration: none; padding-left: 0"
+              :to="{ name: 'PageSingle', params: { id: onePost.post_id } }"
             >
-              {{ onePost.post_title }}
-            </div>
+              <div
+                class="trusted-heading"
+                style="padding-top: 0; text-align: left"
+              >
+                {{ onePost.post_title }}
+              </div>
+            </router-link>
             <div class="trusted-sec-heading mt-3" style="text-align: left">
               Duis orci nisl, ornare non diam id, dapibus faucibus urna. <br />
               Vestibulum tristique posuere iaculis. Suspendisse orci tortor,
@@ -74,7 +84,6 @@
               :key="post.post_id"
             >
               <router-link
-                style="text-decoration: none"
                 :to="{ name: 'PageSingle', params: { id: post.post_id } }"
               >
                 <img :src="post.post_image" alt="" />
@@ -104,6 +113,18 @@
         <router-link :to="{ name: 'Home' }">
           <img src="../assets/BlogImages/previous.png" class="mb-5 pb-5" alt=""
         /></router-link>
+      </div>
+      <div class="d-none">
+        <img src="../assets/BlogImages/blogImage.png" alt="" />
+        <img src="../assets/BlogImages/blogImage1.png" alt="" />
+        <img src="../assets/BlogImages/blogImage2.png" alt="" />
+        <img src="../assets/BlogImages/blogImage3.png" alt="" />
+        <img src="../assets/BlogImages/blogImage4.png" alt="" />
+        <img src="../assets/BlogImages/blogImage5.png" alt="" />
+        <img src="../assets/BlogImages/blogImage6.png" alt="" />
+        <img src="../assets/BlogImages/blogImage7.png" alt="" />
+        <img src="../assets/BlogImages/blogImage8.png" alt="" />
+        <img src="../assets/BlogImages/blogImage9.png" alt="" />
       </div>
     </section>
   </div>

@@ -651,10 +651,4 @@ export default {
     color: rgba(31, 31, 57, 0.5);
   }
 }
-@media screen and (max-width: 1680px) {
-  .left,
-  .right {
-    visibility: hidden;
-  }
-}
 </style>

@@ -33,18 +33,35 @@ const routes = [
   {
     path: "/page-login",
     name: "PageLogin",
-    component: PageLogin,
+    component: () => import("../views/PageLogin.vue"),
+    meta: {
+      loggedIn: false,
+    },
   },
   {
     path: "/page-register",
     name: "PageRegister",
-    component: PageRegister,
+    component: () => import("../views/PageRegister.vue"),
+    meta: {
+      loggedIn: false,
+    },
   },
 ];
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
+});
+router.beforeEach((to, from, next) => {
+  if (to.meta.loggedIn) {
+    if (!localStorage.getItem("token")) {
+      next("/");
+    } else {
+      next();
+    }
+  } else {
+    next();
+  }
 });
 
 export default router;

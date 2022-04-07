@@ -36,7 +36,9 @@
 
           <router-link class="link" to="/page-blog">Blog</router-link>
           <router-link class="link" to="/page-contact">Contact</router-link>
-          <router-link class="link" to="/page-login">Login</router-link>
+          <router-link class="link" v-if="!hideLogin" to="/page-login"
+            >Login</router-link
+          >
         </div>
         <router-link class="link register" to="/page-register"
           ><button class="button">Sign Up</button>
@@ -54,6 +56,7 @@ export default {
   data() {
     return {
       show: true,
+      hideLogin: false,
     };
   },
   methods: {

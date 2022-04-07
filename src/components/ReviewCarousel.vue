@@ -9,7 +9,7 @@
         <i @click="nextSlide()" class="fas fa-chevron-right"></i>
       </div>
     </div> -->
-    <!-- <div class="pagination">
+    <div class="pagination">
       <span
         @click="goToSlide(index)"
         v-for="(slide, index) in getSlideCount"
@@ -17,7 +17,7 @@
         :class="{ active: index + 1 === currentSlide }"
       >
       </span>
-    </div> -->
+    </div>
   </div>
 </template>
 
@@ -28,7 +28,7 @@ export default {
     const currentSlide = ref(4);
     const getSlideCount = ref(null);
     const autoPlayEnabled = ref(true);
-    const timeoutDuration = ref(2000);
+    const timeoutDuration = ref(3000);
 
     const nextSlide = () => {
       if (currentSlide.value === getSlideCount.value) {
@@ -37,13 +37,13 @@ export default {
       }
       currentSlide.value += 1;
     };
-    // const prevSlide = () => {
-    //   if (currentSlide.value === 1) {
-    //     currentSlide.value = 1;
-    //     return;
-    //   }
-    //   currentSlide.value -= 1;
-    // };
+    const prevSlide = () => {
+      if (currentSlide.value === 1) {
+        currentSlide.value = 1;
+        return;
+      }
+      currentSlide.value -= 1;
+    };
     const goToSlide = (index) => {
       currentSlide.value = index + 1;
     };
@@ -56,10 +56,10 @@ export default {
       autoPlay();
     }
     onMounted(() => {
-      getSlideCount.value = document.querySelectorAll(".slide").length;
+      getSlideCount.value = document.querySelectorAll(".slidePeople").length;
     });
 
-    return { currentSlide, nextSlide, getSlideCount, goToSlide };
+    return { currentSlide, nextSlide, prevSlide, getSlideCount, goToSlide };
   },
 };
 </script>
@@ -92,25 +92,25 @@ export default {
     color: #fff;
   }
 }
-// .pagination {
-//   position: absolute;
-//   z-index: 1;
-//   bottom: 15px;
-//   width: 100%;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   gap: 16px;
-//   span {
-//     cursor: pointer;
-//     width: 20px;
-//     height: 20px;
-//     border-radius: 50%;
-//     background-color: #fff;
-//     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-//   }
-//   .active {
-//     background-color: #6347c7;
-//   }
-// }
+.pagination {
+  position: absolute;
+  z-index: 1;
+  bottom: 15px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  span {
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgba(31, 31, 57, 0.1);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  }
+  .active {
+    background: #0e7dff;
+  }
+}
 </style>

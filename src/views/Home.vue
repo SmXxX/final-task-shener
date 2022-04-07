@@ -59,15 +59,14 @@
         </div>
       </div>
     </section>
-    <section class="phones">
-      <div class="spacing"></div>
+    <section class="phones" style="margin-top: -180px">
       <Carousel class="carousel" v-slot="{ currentSlide }">
         <CarouselSlide v-for="(slide, index) in carouselSlides" :key="index">
           <div class="container">
             <div class="row">
               <div v-show="currentSlide === index + 1" class="slide-info">
                 <div
-                  class="container-fluid d-flex justify-content-around"
+                  class="container-fluid"
                   style="max-weight: 100%; overflow-x: hidden"
                 >
                   <img
@@ -76,17 +75,56 @@
                     style="max-width: 100%"
                     alt=""
                   />
-                  <img src="../assets/HomeImages/Phone1.png" alt="" />
-                  <img src="../assets/HomeImages/Phone2.png" alt="" />
-                  <img src="../assets/HomeImages/Phone3.png" alt="" />
-                  <img
-                    class="slide-images"
-                    :src="require(`../assets/HomeImages/${slide}.png`)"
-                    alt=""
-                  />
-                  <img src="../assets/HomeImages/Phone5.png" alt="" />
-                  <img src="../assets/HomeImages/Phone6.png" alt="" />
-                  <img src="../assets/HomeImages/Phone7.png" alt="" />
+                  <div class="left" style="position: absolute; top: 0; left: 0">
+                    <img
+                      class="mb-5 pb-5"
+                      style="margin-right: 50px"
+                      src="../assets/HomeImages/Phone1.png"
+                      alt=""
+                    />
+                    <img
+                      class="mt-5 pt-5"
+                      style="margin-right: 50px"
+                      src="../assets/HomeImages/Phone2.png"
+                      alt=""
+                    />
+                    <img
+                      class="mb-5 pb-5"
+                      style="margin-right: 50px"
+                      src="../assets/HomeImages/Phone3.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="center">
+                    <img
+                      class="slide-images"
+                      :src="require(`../assets/HomeImages/${slide}.png`)"
+                      alt=""
+                    />
+                  </div>
+                  <div
+                    class="right"
+                    style="position: absolute; top: 0; right: 0"
+                  >
+                    <img
+                      class="mb-5 pb-5"
+                      style="margin-left: 50px"
+                      src="../assets/HomeImages/Phone5.png"
+                      alt=""
+                    />
+                    <img
+                      class="mt-5 pt-5"
+                      style="margin-left: 50px"
+                      src="../assets/HomeImages/Phone6.png"
+                      alt=""
+                    />
+                    <img
+                      class="mb-5 pb-5"
+                      style="margin-left: 50px"
+                      src="../assets/HomeImages/Phone7.png"
+                      alt=""
+                    />
+                  </div>
                 </div>
               </div>
             </div>
@@ -347,6 +385,13 @@
                     :src="require(`../assets/HomeImages/${slide}.jpg`)"
                     alt=""
                   />
+                  <div class="peopleText mt-3">
+                    <div>
+                      “Onir is an awesome app I have ever used. It <br />
+                      helps me to work so easy and productive. UI <br />
+                      Design is so stunning recommanded.”
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -487,12 +532,18 @@ import ReviewCarouselSlide from "../components/ReviewCarouselSlide.vue";
 
 export default {
   name: "Home",
+  data() {
+    return {
+      names: "",
+    };
+  },
   components: {
     Carousel,
     CarouselSlide,
     ReviewCarousel,
     ReviewCarouselSlide,
   },
+
   setup() {
     const carouselSlides = [
       "Phone1",
@@ -504,18 +555,19 @@ export default {
       "Phone7",
     ];
 
-    // const peopleSlides = [
-    //   "person1",
-    //   "person2",
-    //   "person3",
-    //   "person4",
-    //   "person5",
-    //   "person6",
-    //   "person7",
-    // ];
+    const peopleSlides = [
+      "person1",
+      "person2",
+      "person3",
+      "person4",
+      "person5",
+      "person6",
+      "person7",
+    ];
+
     return {
       carouselSlides,
-      // peopleSlides,
+      peopleSlides,
     };
   },
 };
@@ -582,6 +634,27 @@ export default {
 .peopleLoves {
   .people-images {
     border-radius: 50%;
+  }
+  .peopleText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    /* or 140% */
+
+    text-align: center;
+
+    color: rgba(31, 31, 57, 0.5);
+  }
+}
+@media screen and (max-width: 1680px) {
+  .left,
+  .right {
+    visibility: hidden;
   }
 }
 </style>

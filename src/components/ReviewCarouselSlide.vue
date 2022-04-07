@@ -1,5 +1,5 @@
 <template>
-  <div class="slide">
+  <div class="slidePeople">
     <transition name="slide">
       <slot />
     </transition>

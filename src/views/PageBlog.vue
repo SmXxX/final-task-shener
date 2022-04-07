@@ -40,18 +40,14 @@
             </router-link>
           </div>
           <div class="col col-lg-6 col-sm-12 mb-5" style="margin-top: -50px">
-            <div class="trusted-heading">
-              <router-link
-                style="text-decoration: none"
-                :to="{ name: 'PageSingle', params: { id: post.post_id } }"
-              >
-                {{ post.post_title }}
-              </router-link>
-              <br />
-              <span class="trusted-sec-heading">{{
-                post.post_description
-              }}</span>
-            </div>
+            <router-link
+              style="text-decoration: none"
+              :to="{ name: 'PageSingle', params: { id: post.post_id } }"
+            >
+              <div class="trusted-heading">{{ post.post_title }}</div>
+            </router-link>
+            <br />
+            <span class="trusted-sec-heading">{{ post.post_description }}</span>
             <br />
             <router-link
               style="text-decoration: none"

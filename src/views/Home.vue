@@ -334,7 +334,7 @@
           personable services and knowledge.</span
         >
 
-        <!-- <ReviewCarousel class="carousel mt-5" v-slot="{ currentSlide }">
+        <ReviewCarousel class="carousel mt-5" v-slot="{ currentSlide }">
           <ReviewCarouselSlide
             v-for="(slide, index) in peopleSlides"
             :key="index"
@@ -351,7 +351,7 @@
               </div>
             </div>
           </ReviewCarouselSlide>
-        </ReviewCarousel> -->
+        </ReviewCarousel>
       </div>
     </section>
     <section

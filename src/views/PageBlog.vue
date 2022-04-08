@@ -138,9 +138,9 @@
             </div>
           </div>
         </div>
-        <router-link :to="{ name: 'Home' }">
+        <a href="/">
           <img src="../assets/BlogImages/previous.png" class="mb-5 pb-5" alt=""
-        /></router-link>
+        /></a>
       </div>
       <div class="d-none">
         <img src="../assets/BlogImages/blogImage.png" alt="" />

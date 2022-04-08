@@ -86,7 +86,7 @@
               <router-link
                 :to="{ name: 'PageSingle', params: { id: post.post_id } }"
               >
-                <div class="blog-photos">
+                <div class="blog-photos px-3">
                   <img :src="post.post_image" alt="" />
                 </div>
               </router-link>
@@ -113,7 +113,7 @@
               </router-link>
               <br />
               <div
-                class="trusted-sec-heading"
+                class="col-6 trusted-sec-heading"
                 style="
                   font-size: 16px;
                   text-align: left;
@@ -191,5 +191,8 @@ export default {
 <style lang="scss" scoped>
 .blog-photos {
   display: flex;
+  img {
+    width: 100%;
+  }
 }
 </style>

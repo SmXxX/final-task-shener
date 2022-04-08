@@ -154,9 +154,12 @@
           <div>register to you and your clients.</div></span
         >
       </div>
-      <div class="container bg-info rounded">
+      <div class="container how-works">
+        <div class="div-ellipse4">
+          <img src="../assets/HomeImages/Ellipse36.png" alt="" />
+        </div>
         <div class="row">
-          <div class="col col-lg-4 col-sm-12 order-lg-2">
+          <div class="col col-lg-4 col-sm-12 order-lg-2 screenshot-bg">
             <img
               src="../assets/HomeImages/PhoneScreenshot.png"
               alt=""
@@ -225,8 +228,18 @@
       >
       <div class="container">
         <div class="row">
-          <div class="col col-lg-6 col-sm-12 mt-5">
+          <div class="col col-lg-6 col-sm-12 mt-5 div-ellipse5">
+            <img
+              class="subtract"
+              src="../assets/HomeImages/Subtract1.png"
+              alt=""
+            />
             <img src="../assets/HomeImages/mobileScreenshot.png" alt="" />
+            <img
+              class="ellipse3"
+              src="../assets/HomeImages/Ellipse3.png"
+              alt=""
+            />
           </div>
           <div class="col col-lg-6 col-sm-12">
             <div>
@@ -269,8 +282,18 @@
           </div>
         </div>
         <div class="row">
-          <div class="col col-lg-6 col-sm-12 mt-5 order-lg-2">
+          <div class="col col-lg-6 col-sm-12 mt-5 order-lg-2 div-ellipse6">
+            <img
+              class="subtract2"
+              src="../assets/HomeImages/Subtract2.png"
+              alt=""
+            />
             <img src="../assets/HomeImages/AhoyScreenshot.png" alt="" />
+            <img
+              class="ellipse4"
+              src="../assets/HomeImages/Ellipse4.png"
+              alt=""
+            />
           </div>
           <div class="col col-lg-6 col-sm-12">
             <div>
@@ -599,6 +622,65 @@ export default {
     left: 50%;
     width: 571px;
     height: 565px;
+  }
+  @media screen and (max-width: 1268px) {
+    .left,
+    .right {
+      visibility: hidden;
+    }
+  }
+}
+#how-works {
+  .div-ellipse4 {
+    position: relative;
+    img {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translate(-50%, -100%);
+    }
+  }
+  .how-works {
+    background: #fff0e9;
+    border-radius: 25px;
+  }
+  .screenshot-bg {
+    background-image: url("../assets/HomeImages/screenshot-bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+}
+.features {
+  .div-ellipse5 {
+    position: relative;
+    .ellipse3 {
+      position: absolute;
+      top: 0;
+      transform: translateX(-30%);
+      z-index: -1;
+    }
+    .subtract {
+      position: absolute;
+      top: 50%;
+      right: 100%;
+      transform: translate(150%, 150%);
+    }
+  }
+  .div-ellipse6 {
+    position: relative;
+    .ellipse4 {
+      position: absolute;
+      top: 0;
+      transform: translate(-30%, 250%);
+      z-index: -1;
+    }
+    .subtract2 {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      transform: translate(100%, -500%);
+    }
   }
 }
 .logos img {

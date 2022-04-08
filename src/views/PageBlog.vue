@@ -20,7 +20,7 @@
       </div>
     </section>
     <section class="blog-sec-hero">
-      <div v-if="onePost" class="container-fluid m-0 px-0 px-md-4">
+      <div v-if="onePost" class="container-fluid px-md-4">
         <div class="row mx-0 px-3 mx-md-5 mb-5" style="margin-top: -60px">
           <div class="col col-lg-6 col-sm-12">
             <router-link
@@ -79,22 +79,34 @@
         <div class="d-flex flex-column align-items-center">
           <div class="row px-5 mx-5">
             <div
-              class="col-lg-4 col-md-12 col-sm-12 mb-5 pb-5"
+              class="col-lg-4 col-md-6 col-sm-12 mb-5 pb-5"
               v-for="post in posts"
               :key="post.post_id"
             >
               <router-link
                 :to="{ name: 'PageSingle', params: { id: post.post_id } }"
               >
-                <img :src="post.post_image" alt="" />
+                <div class="blog-photos">
+                  <img :src="post.post_image" alt="" />
+                </div>
               </router-link>
+              <div
+                class="mt-5 trusted-sec-heading"
+                style="
+                  font-size: 16px;
+                  text-align: left;
+                  color: rgba(31, 31, 57, 0.5);
+                "
+              >
+                {{ post.post_upload }}
+              </div>
               <router-link
                 style="text-decoration: none"
                 :to="{ name: 'PageSingle', params: { id: post.post_id } }"
               >
                 <div
                   class="trusted-heading"
-                  style="font-size: 20px; text-align: left"
+                  style="font-size: 20px; text-align: left; padding-top: 0"
                 >
                   {{ post.post_title }}
                 </div>
@@ -102,11 +114,27 @@
               <br />
               <div
                 class="trusted-sec-heading"
-                style="font-size: 14px; text-align: left"
+                style="
+                  font-size: 16px;
+                  text-align: left;
+                  color: rgba(31, 31, 57, 0.5);
+                "
               >
                 {{ post.post_description }}
               </div>
               <br />
+              <div class="mt-3">
+                <router-link
+                  style="text-decoration: none; padding-left: 0"
+                  :to="{ name: 'PageSingle', params: { id: onePost.post_id } }"
+                  ><div
+                    class="trusted-sec-heading"
+                    style="color: #0e7dff; text-align: left"
+                  >
+                    Read Story
+                  </div></router-link
+                >
+              </div>
             </div>
           </div>
         </div>
@@ -159,3 +187,9 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+.blog-photos {
+  display: flex;
+}
+</style>

@@ -7,9 +7,9 @@
       class="navbar navbar-expand-lg navbar-light"
       v-bind:class="{ navbarOpen: show }"
     >
-      <router-link class="link" to="/"
-        ><img src="../assets/HeaderLogo/logo.png" alt="" class="logo"
-      /></router-link>
+      <router-link class="link" to="/">
+        <p><img src="../assets/HeaderLogo/logo.png" alt="" class="logo" /></p
+      ></router-link>
       <button
         class="navbar-toggler"
         type="button"
@@ -36,7 +36,7 @@
 
           <router-link class="link" to="/page-blog">Blog</router-link>
           <router-link class="link" to="/page-contact">Contact</router-link>
-          <router-link class="link" v-if="!hideLogin" to="/page-login"
+          <router-link class="link login" v-if="!hideLogin" to="/page-login"
             >Login</router-link
           >
         </div>
@@ -82,7 +82,6 @@ export default {
   font-size: 18px;
   line-height: 21px;
   text-decoration: none;
-  text-align: right;
   color: #1f1f39;
 }
 .button {
@@ -97,8 +96,5 @@ export default {
   height: 45px;
   background: #0e7dff;
   border-radius: 500px;
-}
-
-@media screen and (max-width: 768px) {
 }
 </style>

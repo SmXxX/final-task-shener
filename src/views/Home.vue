@@ -534,7 +534,15 @@ export default {
   name: "Home",
   data() {
     return {
-      names: "",
+      names: [
+        "Natasha",
+        "Samantha",
+        "Violet",
+        "Jane",
+        "Josh",
+        "Anthony",
+        "Karol",
+      ],
     };
   },
   components: {

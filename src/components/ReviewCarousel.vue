@@ -25,7 +25,8 @@
 import { ref, onMounted } from "vue";
 export default {
   setup() {
-    const currentSlide = ref(4);
+    const currentName = ref(1);
+    const currentSlide = ref(1);
     const getSlideCount = ref(null);
     const autoPlayEnabled = ref(true);
     const timeoutDuration = ref(3000);

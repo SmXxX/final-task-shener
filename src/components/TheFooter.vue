@@ -1,9 +1,11 @@
 <template>
   <div class="main" style="background-color: #1f1f39; padding: 200px 0 200px 0">
     <div
-      class="container rounded"
-      style="margin-top: -250px; background-color: #fff0e9"
+      class="container dots-container"
+      style="margin-top: -250px; background-color: #fff0e9; border-radius: 25px"
     >
+      <img src="../assets/FooterImages/Group.png" class="dots" alt="" />
+
       <div class="row">
         <div class="col col-lg-6 col-sm-12 order-lg-3 mb-5">
           <img
@@ -35,6 +37,12 @@
           </div>
         </div>
       </div>
+      <img src="../assets/FooterImages/wave.png" class="wave" alt="" />
+      <img
+        src="../assets/FooterImages/ellipse-footer.png"
+        class="ellipse-footer"
+        alt=""
+      />
     </div>
     <div class="container mt-3">
       <div class="row">
@@ -212,5 +220,27 @@
   line-height: 28px;
 
   color: #ffffff;
+}
+.dots-container {
+  position: relative;
+  .dots {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-150%, -30%);
+    z-index: 1;
+  }
+  .wave {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: translate(50%, -100%);
+    z-index: 0;
+  }
+  .ellipse-footer {
+    position: absolute;
+    left: 0;
+    transform: translate(-150%, 100%);
+  }
 }
 </style>
